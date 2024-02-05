@@ -43,6 +43,19 @@
 */
 int pso_prs_compress(const uint8_t *src, uint8_t **dst, size_t src_len);
 
+/* Compress a buffer with PRS compression into a preallocated buffer.
+
+   This function compresses the data in the src buffer into a preallocated
+   buffer. This function will never produce output larger than that of the
+   prs_archive function, and will usually beat that function rather
+   significantly.
+
+   Returns a negative value on failure (specifically something from
+   psoarchive-error.h). Returns the size of the compressed output on success.
+*/
+int pso_prs_compress2(const uint8_t *src, uint8_t *dst, size_t src_len,
+                      size_t dst_len);
+
 /* Archive a buffer in PRS format.
 
    This function archives the data in the src buffer into a new buffer. This
