@@ -58,7 +58,7 @@ struct pso_afs_read {
     uint32_t flags;
 };
 
-#ifdef _WIN32
+#if defined(_WIN32) || defined(__NEWLIB__)
 time_t my_timegm (struct tm *tm) {
     time_t ret;
     char *tz;

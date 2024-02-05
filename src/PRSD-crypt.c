@@ -49,7 +49,7 @@
                  ((x >>  8) & 0xFF00) | \
                  ((x & 0xFF00) <<  8) | \
                  ((x & 0x00FF) << 24))
-#define BE32() x
+#define BE32(x) x
 #else
 #define LE32(x) x
 #define BE32(x) (((x >> 24) & 0x00FF) | \
