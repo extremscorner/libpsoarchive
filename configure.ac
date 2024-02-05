@@ -29,9 +29,7 @@ AC_TYPE_INT32_T
 AC_C_BIGENDIAN
 
 # Checks for library functions.
-AC_FUNC_MALLOC
-AC_FUNC_REALLOC
-AC_CHECK_FUNCS([memset])
+AC_CHECK_FUNCS([malloc realloc memset])
 
 AC_CONFIG_FILES([Makefile
                  doc/Makefile
